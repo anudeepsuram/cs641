@@ -4,17 +4,18 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 export default function App() {
   const name = "Raj"; 
+  const start= 9; 
   return (
     <View style={styles.container}>
       <Display name={name} />
-      <Counter />
+      <Counter inital={start}/>
       <StatusBar style="auto" />
     </View>
   );
 }
 
-function Counter() {
-  const [count, setCount] = useState(0);
+function Counter({inital}) {
+  const [count, setCount] = useState(inital);
   
   return (
     <View>
